@@ -1,0 +1,16 @@
+{% extends 'app_hw/base.html' %}
+{% block title %}
+    Detail
+{% endblock %}
+
+{% block content %}
+    <h2>Post author {{ post_id.author_post }}</h2>
+    <div>
+        <p>Name: {{ post_id.author_post }}</p>
+        <p>Title: {{ post_id.title }}</p>
+        <p>Description: {{ post_id.description_post }}</p>
+        <p>Quantity likes: {{ post_id.quantity_likes }}</p>
+        <p>Tags: {{ post_id.tags.all|join:", " }}</p>
+    </div>
+    <p><a href="{% url 'main_page' %}">Back</a></p>
+{% endblock content %}

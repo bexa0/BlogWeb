@@ -1,0 +1,17 @@
+{% extends 'app_hw/base.html' %}
+{% block title %}
+    post create
+{% endblock %}
+
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <br>
+    <input type="submit" value="Create">
+    <br>
+    <p><a href="{% url 'main_page' %}">back</a></p>
+</form>
+
+{% endblock content %}

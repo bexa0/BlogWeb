@@ -1,0 +1,16 @@
+{% extends 'app_hw/base.html' %}
+{% block title %}
+    Update Page
+{% endblock %}
+
+{% block content %}
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update</button>
+        <br>
+        <p><a href="{% url 'main_page' %}">back</a></p>
+    </form>
+
+{% endblock content %}
